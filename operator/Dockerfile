@@ -4,7 +4,7 @@ ENV PATH="/kadalu/bin:/opt/bin:/opt/sbin:$PATH"
 
 RUN python3 -m pip install kubernetes==11.0.0
 
-FROM ubuntu:20.04 as prod
+FROM ubuntu:18.04 as prod
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -yq && \

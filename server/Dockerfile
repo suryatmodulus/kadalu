@@ -2,7 +2,7 @@ FROM kadalu/builder:latest as builder
 
 ENV PATH="/kadalu/bin:/opt/bin:/opt/sbin:$PATH"
 
-FROM ubuntu:20.04 as prod
+FROM ubuntu:18.04 as prod
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/kadalu/bin:/opt/bin:/opt/sbin:$PATH"

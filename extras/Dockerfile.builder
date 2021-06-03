@@ -19,7 +19,7 @@ RUN apt-get update -yq && \
     python3 -m venv $VIRTUAL_ENV && cd $VIRTUAL_ENV && \
     python3 -m pip install --upgrade pip && \
     python3 -m pip install --upgrade setuptools && \
-    pip install prometheus-client jinja2 requests datetime xxhash
+    pip install markupsafe==1.1.1 prometheus-client jinja2==2.10 requests datetime xxhash
 
 RUN sed -i "s/include-system-site-packages = false/include-system-site-packages = true/g" /kadalu/pyvenv.cfg
 

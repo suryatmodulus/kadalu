@@ -18,7 +18,7 @@ RUN apt-get update -yq && \
     rm -rf /var/lib/apt/lists/*
 
 # copy pyxattr installed in pypi_source image
-COPY --from=kadalu/pypi_source:latest /usr/local/lib/python3.8/dist-packages /kadalu/lib/python3.8/site-packages/
+COPY --from=kadalu/pypi_source:latest /usr/local/lib/python3.6/dist-packages /kadalu/lib/python3.6/site-packages/
 
 RUN mkdir -p /kadalu/templates /kadalu/volfiles
 RUN mkdir -p /var/run/gluster /var/log/glusterfs

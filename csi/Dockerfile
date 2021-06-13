@@ -22,7 +22,7 @@ COPY --from=builder /opt /opt
 COPY --from=builder /kadalu /kadalu
 
 # copy grpcio installed in pypi_source image
-COPY --from=kadalu/pypi_source:latest /usr/local/lib/python3.8/dist-packages /kadalu/lib/python3.8/site-packages/
+COPY --from=kadalu/pypi_source:latest /usr/local/lib/python3.6/dist-packages /kadalu/lib/python3.6/site-packages/
 
 RUN mkdir -p /kadalu/volfiles /kadalu/templates
 RUN mkdir -p /var/log/glusterfs /var/run/gluster
